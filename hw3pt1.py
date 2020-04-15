@@ -25,16 +25,36 @@ def runge_kutta(f, x0, y0, h, vb):#Anything after h is other constants or variab
     tn1 = x0 + h
     yn1 = y0 + ((1/6)*h*(k1 + k2 + k3 + k4))
     return tn1 , yn1
-xplot = list()
-yplot = list()
+xplot1 = list()
+yplot1 = list()
+xplot2 = list()
+yplot2 = list()
+xplot3 = list()
+yplot3 = list()
 x = 7777
 y = 0
 h = -.1
 while x > 0:
-    xplot.append(x)
-    yplot.append(y)
+    xplot1.append(x)
+    yplot1.append(y)
     x, y = runge_kutta(f, x, y, h, v_B1)
-plt.scatter(xplot, yplot)
+x = 7777
+y = 0
+h = -.1
+while x > 0:
+    xplot2.append(x)
+    yplot2.append(y)
+    x, y = runge_kutta(f, x, y, h, v_B2)
+x = 7777
+y = 0
+h = -.1
+while x > 0:
+    xplot3.append(x)
+    yplot3.append(y)
+    x, y = runge_kutta(f, x, y, h, v_B3)
+plt.plot(xplot1, yplot1, 'r')
+plt.plot(xplot2, yplot2, 'g')
+plt.plot(xplot3, yplot3, 'b')
 plt.show()
 '''
 def g(k, A, T):
