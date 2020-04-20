@@ -5,6 +5,9 @@
 #include <stdbool.h>
 #include <math.h>
 
+double getRandom(double min, double max){
+    return min + ((double)rand() / ( (double)RAND_MAX / (double)(max-min) ) ) ;
+}
 
 bool intersectLineCircle(double a, double b, double c, double x, double y, double r){
     double dist = fabs(a*x + b*y + c) / (sqrt(a*a + b*b));
@@ -21,10 +24,6 @@ int intersectLineCircle2(double left, double d){
     double right = left - d;
     int intersects = floor(left) - floor(right);
     return intersects;
-}
-
-double getRandom(double min, double max){
-    return min + ((double)rand() / ( (double)RAND_MAX / (double)(max-min) ) ) ;
 }
 
 void buffonDisc(int nlines, double d, int tosses){
