@@ -51,6 +51,6 @@ def buffon_Disc(xrange, yrange, nlines, d, tosses):
     print(intersects/tosses)
 import time
 start_time = time.time()
-buffon_Disc(10, 10, 10, .75, tosses)
+buffon_Disc(10, 10, 10, .75, 1000)
 #genNCircleCenter(10, 10, tosses)
 print("--- %s seconds ---" % (time.time() - start_time))
