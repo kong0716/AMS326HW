@@ -81,15 +81,17 @@ void buffonDisc(int nlines, double d, int tosses){
     double probTen = (double)  intersectsTen / (double)tosses;
     printf("Below is the probabilities of a disk of diameter %f\n", d);
     printf("The probability of a disk crossing once is %f\n", probOnce);
-    printf("The probability of a disk crossing twice is %f\n", probTwice);
-    printf("The probability of a disk crossing thrice is %f\n", probThrice);
-    printf("The probability of a disk crossing four times is %f\n", probFour);
-    printf("The probability of a disk crossing five times is %f\n", probFive);
-    printf("The probability of a disk crossing six times is %f\n", probSix);
-    printf("The probability of a disk crossing seven times is %f\n", probSeven);
-    printf("The probability of a disk crossing eight times is %f\n", probEight);
-    printf("The probability of a disk crossing nine times is %f\n", probNine);
-    printf("The probability of a disk crossing ten times is %f\n", probTen);
+    if(d > 1){
+        printf("The probability of a disk crossing twice is %f\n", probTwice);
+        printf("The probability of a disk crossing thrice is %f\n", probThrice);
+        printf("The probability of a disk crossing four times is %f\n", probFour);
+        printf("The probability of a disk crossing five times is %f\n", probFive);
+        printf("The probability of a disk crossing six times is %f\n", probSix);
+        printf("The probability of a disk crossing seven times is %f\n", probSeven);
+        printf("The probability of a disk crossing eight times is %f\n", probEight);
+        printf("The probability of a disk crossing nine times is %f\n", probNine);
+        printf("The probability of a disk crossing ten times is %f\n", probTen);
+    }
 }
 
 
